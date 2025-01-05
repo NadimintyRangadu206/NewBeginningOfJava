@@ -63,7 +63,10 @@ public class FirstProgram {
 	  System.out.println(t);
 	  
 	  
+	  Vehicle vehicle= new Car();
 	  
+	
+	
 	  
 	  
 	}
