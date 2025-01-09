@@ -19,6 +19,11 @@ public class InterviewQuestion2 {
 		System.out.println(l5.hashCode() == l6.hashCode());
 		System.out.println(l5 == l6);
 
+		InterviewQuestion2 interviewQuestion2 = new InterviewQuestion2();
+
+		boolean b = (interviewQuestion2 instanceof InterviewQuestion2);
+		System.out.println(b);
+
 	}
 
 }
