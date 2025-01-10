@@ -64,6 +64,10 @@ public class SuperKeyWordPractice {
 		sbi.display();
 		
 		sbi.deposit(20, 40, 60);
+		
+		IndusLand indusLand = (IndusLand)new CentralBank("Raju", 22329892);
+		
+		      indusLand.deposite(4984923, 232029032);
 
 	}
 }
