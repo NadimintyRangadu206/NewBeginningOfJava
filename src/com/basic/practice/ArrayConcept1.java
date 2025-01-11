@@ -163,14 +163,12 @@ public class ArrayConcept1 {
 //			System.out.println();
 		}
 
-		
 		System.out.println("Print the Addition of  Matrix");
-		
-		
+
 		for (int r = 0; r < add.length; r++) {
 			for (int t = 0; t < add[r].length; t++) {
 
-				System.out.print(add[r][t]+" ");
+				System.out.print(add[r][t] + " ");
 
 			}
 			System.out.println();
