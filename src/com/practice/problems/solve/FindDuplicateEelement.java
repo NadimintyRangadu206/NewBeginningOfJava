@@ -239,12 +239,12 @@ public class FindDuplicateEelement {
 		for (int i = 0; i < arr.length; i++) {
 
 			if (arr[i] % 2 != 0) {
-               System.out.println(arr[i]);
+				System.out.println(arr[i]);
 			}
 		}
 
 	}
-	
+
 	public static void tranposeMatrix(int arr1[][]) {
 
 		int matrix[][] = new int[3][3];
@@ -260,26 +260,25 @@ public class FindDuplicateEelement {
 
 		}
 
-		
 		System.out.println();
-		
+
 		for (int i = 0; i < arr1.length; i++) {
 
 			for (int j = 0; j < arr1[i].length; j++) {
 
-				System.out.print( arr1[i][j]+" ");
+				System.out.print(arr1[i][j] + " ");
 
 			}
 			System.out.println();
 
 		}
-		
+
 		System.out.println();
 		for (int i = 0; i < matrix.length; i++) {
 
 			for (int j = 0; j < matrix[i].length; j++) {
 
-				System.out.print(matrix[i][j]+" ");
+				System.out.print(matrix[i][j] + " ");
 
 			}
 			System.out.println();
@@ -288,6 +287,60 @@ public class FindDuplicateEelement {
 
 	}
 
+	public static void sumColRow(int arr1[][]) {
+
+		for (int i = 0; i < arr1.length; i++) {
+			int sum = 0;
+			for (int j = 0; j < arr1[i].length; j++) {
+
+				sum += arr1[i][j];
+
+			}
+			System.out.println(sum);
+
+		}
+
+		System.out.println("Print Column");
+
+		for (int i = 0; i < arr1.length; i++) {
+			int sum = 0;
+
+			for (int j = 0; j < arr1[i].length; j++) {
+
+				sum += arr1[j][i];
+
+			}
+			System.out.println(sum);
+
+		}
+
+	}
+
+	public static void sumEvenOddCount(int arr1[][]) {
+
+		int evCount = 0;
+		int odCount = 0;
+
+		for (int i = 0; i < arr1.length; i++) {
+
+			for (int j = 0; j < arr1[i].length; j++) {
+
+				if (arr1[i][j] % 2 == 0) {
+
+					evCount++;
+
+				} else {
+					odCount++;
+				}
+
+			}
+
+		}
+
+		System.out.println("Even Count" + "=" + evCount);
+
+		System.out.println("Even Count" + "=" + odCount);
+	}
 
 	public static void main(String[] args) {
 
@@ -304,10 +357,13 @@ public class FindDuplicateEelement {
 		FindDuplicateEelement.removeDuplicateElement(new int[] { 4, 5, 6, 7, 5, 6 });
 		FindDuplicateEelement.multipleMatrix(new int[][] { { 1, 1, 1 }, { 2, 2, 2 }, { 3, 3, 3 } },
 				new int[][] { { 1, 1, 1 }, { 2, 2, 2 }, { 3, 3, 3 } });
-		
+
 		FindDuplicateEelement.evenElement(new int[] { 4, 5, 6, 7, 5, 6 });
-		
+
 		FindDuplicateEelement.tranposeMatrix(new int[][] { { 1, 1, 1 }, { 2, 2, 2 }, { 3, 3, 3 } });
-		
+
+		FindDuplicateEelement.sumColRow(new int[][] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } });
+		FindDuplicateEelement.sumEvenOddCount(new int[][] { { 4, 1, 3 }, { 3, 5, 7 }, { 8, 2, 6 } });
+
 	}
 }
