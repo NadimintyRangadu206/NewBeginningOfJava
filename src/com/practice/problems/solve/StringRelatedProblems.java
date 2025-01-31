@@ -10,23 +10,43 @@ import java.util.List;
 
 public class StringRelatedProblems {
 
+	public static String swapString(String s1, String s2) {
+		
+		s1=s1+s2;
+		
+		s2=s1.substring(0,s1.length()-s2.length());
+		
+		s1=s1.substring(s2.length());
+
+//		       String str[]=new String[2];
+//		       
+//		       str[0]=s2;
+//		       str[1]=s1;
+//		       
+//		       s1=str[0];
+//		       s2=str[1];
+		       
+		return s1+" "+s2;
+
+	}
+
 	public static List<Character> duplicateCharacter(String s1) {
-		
-		List<Character> list= new ArrayList<>();
-		
-		for(int i=0;i<s1.length();i++) {
-			
-			for(int j=i+1;j<s1.length();j++) {
-				
-				if((s1.charAt(i)==s1.charAt(j)) && (s1.charAt(i)!=' ')) {
-					
+
+		List<Character> list = new ArrayList<>();
+
+		for (int i = 0; i < s1.length(); i++) {
+
+			for (int j = i + 1; j < s1.length(); j++) {
+
+				if ((s1.charAt(i) == s1.charAt(j)) && (s1.charAt(i) != ' ')) {
+
 					list.add(s1.charAt(i));
 				}
 			}
 		}
-		
-		 Collections.sort(list);
-		 
+
+		Collections.sort(list);
+
 		return list;
 	}
 
@@ -176,6 +196,8 @@ public class StringRelatedProblems {
 
 	public static void main(String[] args) throws ParseException {
 		
+		System.out.println(swapString("Hello", "World"));
+
 		System.out.println(duplicateCharacter("India is my country"));
 
 		charPercentage("India is my country 100%");
